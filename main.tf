@@ -1,4 +1,11 @@
 terraform {
+  cloud {
+    organization = "Kapakahi"
+
+    workspaces {
+      name = "terra-house"
+    }
+  }
   required_providers {
     random = {
       source = "hashicorp/random"
@@ -10,6 +17,7 @@ terraform {
     }
   }
 }
+
 
 provider "aws" {
   # Configuration options
