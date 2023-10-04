@@ -7,13 +7,13 @@ terraform {
   #    name = "terra-house-1"
   #  }
   #}
-/*   cloud {
+  cloud {
     organization = "Kapakahi"
 
     workspaces {
-      name = "terra-house"
+      name = "terraform-cloud"
     }
-  } */
+  }
 }
 
 module "terrahouse_aws" {
