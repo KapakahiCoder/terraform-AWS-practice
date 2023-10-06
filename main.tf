@@ -36,3 +36,16 @@ provider "terratowns" {
 #   error_html_filepath = var.error_html_filepath
 #   content_version = var.content_version
 # }
+
+resource "terratown_home" "home" {
+  name = "How to play Star Wars: The Old Republic (SWTOR)"
+  description = <<DESCRIPTION
+SWTOR is a MMORPG based in the Star Wars world.
+It was made by Bioware.
+It was released in 2011. This is a guide about how to play SWTOR.
+DESCRIPTION  
+ # domain_name = module.terrahouse_aws.cloudfront_url
+  domain_name = "mocked.cloudfront.net"
+  town = "gamers-grotto"
+  content_version = 1 
+}
