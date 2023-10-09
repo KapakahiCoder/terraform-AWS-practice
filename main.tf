@@ -13,13 +13,13 @@ terraform {
   #    name = "terra-house-1"
   #  }
   #}
-/*   cloud {
+  cloud {
     organization = "Kapakahi"
 
     workspaces {
       name = "terra-house"
     }
-  } */
+  }
 }
 
 provider "terratowns" {
@@ -28,13 +28,11 @@ provider "terratowns" {
   token = var.terratowns_access_token
 }
 
-module "terrahouse_aws" {
-  source = "./modules/terrahouse_aws"
+module "home_swtor_hosting" {
+  source = "./modules/terrahome_aws"
   user_uuid = var.teacherseat_user_uuid 
-  index_html_filepath = var.index_html_filepath
-  error_html_filepath = var.error_html_filepath
-  content_version = var.content_version
-  assets_path = var.assets_path
+  public_path = var.swtor.public_path
+  content_version = var.swtor.content_version
 }
 
 resource "terratowns_home" "home" {
@@ -44,7 +42,25 @@ SWTOR is a MMORPG based in the Star Wars world.
 It was made by Bioware.
 It was released in 2011. This is a guide about how to play SWTOR.
 DESCRIPTION  
-  domain_name = module.terrahouse_aws.cloudfront_url
+  domain_name = module.home_swtor_hosting.domain_name
   town = "missingo"
-  content_version = 1 
+  content_version = var.swtor.content_version
 }
+
+/* module "home_cadbury_hosting" {
+  source = "./modules/terrahome_aws"
+  user_uuid = var.teacherseat_user_uuid 
+  public_path = var.cadbury.public_path
+  content_version = var.cadbury.content_version
+}
+
+resource "terratowns_home" "home_cadbury" {
+  name = "Easter's Cadbury Creme Eggs"
+  description = <<DESCRIPTION
+I love these candy.
+Usually only can buy during Easter.
+DESCRIPTION  
+  domain_name = module.home_cadbury_hosting.domain_name
+  town = "missingo"
+  content_version = var.cadbury.content_version
+} */
