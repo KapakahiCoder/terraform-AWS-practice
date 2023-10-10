@@ -38,7 +38,7 @@ module "home_swtor_hosting" {
 resource "terratowns_home" "home" {
   name = "All About Star Wars: The Old Republic (SWTOR)"
   description = <<DESCRIPTION
-SWTOR is a MMORPG based in the Star Wars world.
+SWTOR is a MMORPG based in the Star Wars world!!!
 It was made by Bioware.
 It was released in 2011. This is a guide about how to play SWTOR.
 DESCRIPTION  
@@ -47,7 +47,7 @@ DESCRIPTION
   content_version = var.swtor.content_version
 }
 
-/* module "home_cadbury_hosting" {
+module "home_cadbury_hosting" {
   source = "./modules/terrahome_aws"
   user_uuid = var.teacherseat_user_uuid 
   public_path = var.cadbury.public_path
@@ -63,4 +63,4 @@ DESCRIPTION
   domain_name = module.home_cadbury_hosting.domain_name
   town = "missingo"
   content_version = var.cadbury.content_version
-} */
+}
