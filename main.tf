@@ -43,7 +43,7 @@ It was made by Bioware.
 It was released in 2011. This is a guide about how to play SWTOR.
 DESCRIPTION  
   domain_name = module.home_swtor_hosting.domain_name
-  town = "missingo"
+  town = "gamers-grotto"
   content_version = var.swtor.content_version
 }
 
@@ -61,6 +61,6 @@ I love these candy.
 Usually only can buy during Easter.
 DESCRIPTION  
   domain_name = module.home_cadbury_hosting.domain_name
-  town = "missingo"
+  town = "cooker-cove"
   content_version = var.cadbury.content_version
 }
