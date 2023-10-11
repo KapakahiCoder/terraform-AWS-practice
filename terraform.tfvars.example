@@ -1,10 +1,10 @@
 terratowns_endpoint = "https://terratowns.cloud/api"
 cadbury = {
-    public_path = "/workspace/terraform-beginner-bootcamp-2023/public/cadbury"
+    public_path = "/workspace/terraform-AWS-practice/public/cadbury"
     content_version=1
 }
 swtor = {
-    public_path = "/workspace/terraform-beginner-bootcamp-2023/public/swtor"
+    public_path = "/workspace/terraform-AWS-practice/public/swtor"
     content_version=1
 }
 
